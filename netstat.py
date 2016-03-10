@@ -1,4 +1,3 @@
-# -*-coding:utf-8 -*-
 import os
 import time
 
@@ -10,9 +9,9 @@ ThisTime=time.localtime(a)
 
 time=time.strftime('%Y-%m-%d %H:%M:%S',ThisTime)   #格式化时间time.localtime(time.time())
 
-with open('sslog.txt','a') as f:   #把当前时间写入日志文件
+with open('/audit/sslog.txt','a') as f:   #把当前时间写入日志文件
 
-	f.write("\n\n"+time+"\n\n")
+	f.write("\n"+time+"\n\n")
 
-with open('sslog.txt','a') as f:   #写入网络连接信息关闭日志文件
+with open('/audit/sslog.txt','a') as f:   #写入网络连接信息关闭日志文件
 	f.write(net)
